@@ -44,3 +44,9 @@ anything = 'hello'
 anything = ['hello', 33, true]
 anything = {}
 anything.test = 'test'
+
+let unionType: number | string = 10
+unionType = 'hello'
+
+let unionTypes: (number | string)[] = [10, 'hello']
+unionTypes
