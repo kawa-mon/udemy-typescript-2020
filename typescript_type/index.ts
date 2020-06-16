@@ -5,3 +5,12 @@ let negative: number = -0.12
 let single: string = 'hello'
 let double: string = 'hello'
 let back: string = `hello`
+
+const person: {
+  name: string
+  age: number
+} = {
+  name: 'Jack',
+  age: 21
+}
+console.log(person)
