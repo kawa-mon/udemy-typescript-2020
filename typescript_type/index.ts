@@ -73,3 +73,11 @@ const sayHello = (): void => {
 }
 
 const doubleNumber: (num: number) => number = (num) => num * 2
+
+const doubleAndHandle = (num: number, cb: (num: number) => number): void => {
+  const doubleNum = cb(num * 2)
+  console.log(doubleNum)
+}
+doubleAndHandle(10, (num) => {
+  return num
+})
