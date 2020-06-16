@@ -52,9 +52,12 @@ unionTypes
 
 // const を用いると Literal型になる
 const apple = 'apple'
+
+// 型エイリアスは大文字から始める
+type ClothSize = 'small' | 'medium' | 'large'
 const cloth: {
   color: string
-  size: 'small' | 'medium' | 'large'
+  size: ClothSize
 } = {
   color: 'white',
   size: 'medium'
