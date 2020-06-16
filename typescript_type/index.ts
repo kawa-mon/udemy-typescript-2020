@@ -81,3 +81,10 @@ const doubleAndHandle = (num: number, cb: (num: number) => number): void => {
 doubleAndHandle(10, (num) => {
   return num
 })
+
+let unknownInput: unknown
+let text: string
+unknownInput = 'hello'
+unknownInput = 33
+unknownInput = true
+if (typeof unknownInput === 'string') text = unknownInput
