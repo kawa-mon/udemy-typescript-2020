@@ -22,10 +22,8 @@ const person: {
 console.log(person)
 
 const fruits: string[] = ['Apple', 'Banana', 'Grape']
-
 const book: [string, number, boolean] = ['business', 1500, false]
 
-// enum型は大文字から始める・中身は全て大文字にするのが慣習
 enum CoffeeSize {
   SHORT = 'SHORT',
   TALL = 'TALL',
@@ -50,10 +48,7 @@ unionType = 'hello'
 let unionTypes: (number | string)[] = [10, 'hello']
 unionTypes
 
-// const を用いると Literal型になる
 const apple = 'apple'
-
-// 型エイリアスは大文字から始める
 type ClothSize = 'small' | 'medium' | 'large'
 const cloth: {
   color: string

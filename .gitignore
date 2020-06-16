@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# トランスパイルJSの除外
+typescript_type/*.js
