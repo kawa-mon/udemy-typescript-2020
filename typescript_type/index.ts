@@ -47,6 +47,15 @@ anything.test = 'test'
 
 let unionType: number | string = 10
 unionType = 'hello'
-
 let unionTypes: (number | string)[] = [10, 'hello']
 unionTypes
+
+// const を用いると Literal型になる
+const apple = 'apple'
+const cloth: {
+  color: string
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: 'medium'
+}
