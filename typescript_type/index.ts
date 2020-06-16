@@ -7,10 +7,16 @@ let double: string = 'hello'
 let back: string = `hello`
 
 const person: {
-  name: string
+  name: {
+    first: string
+    last: string
+  }
   age: number
 } = {
-  name: 'Jack',
+  name: {
+    first: 'Jack',
+    last: 'Smith'
+  },
   age: 21
 }
 console.log(person)
