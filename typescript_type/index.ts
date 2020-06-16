@@ -38,3 +38,9 @@ const coffee = {
   size: CoffeeSize.TALL
 }
 coffee.size
+
+let anything: any = true
+anything = 'hello'
+anything = ['hello', 33, true]
+anything = {}
+anything.test = 'test'
