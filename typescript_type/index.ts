@@ -88,3 +88,8 @@ unknownInput = 'hello'
 unknownInput = 33
 unknownInput = true
 if (typeof unknownInput === 'string') text = unknownInput
+
+const error = (message: string): never => {
+  throw new Error(message)
+}
+error('This is an error')
