@@ -71,3 +71,5 @@ add(3, 2)
 const sayHello = (): void => {
   console.log('Hello')
 }
+
+const doubleNumber: (num: number) => number = (num) => num * 2
