@@ -20,3 +20,5 @@ const person: {
   age: 21
 }
 console.log(person)
+
+const fruits: string[] = ['Apple', 'Banana', 'Grape']
