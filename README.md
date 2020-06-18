@@ -44,17 +44,15 @@
 ### セクション 3：トランスパイラ
 
 - [tsconfig.json の設定一覧](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
-- 上記の `--lib` に記載されているが、ES6 の場合、DOM,ES6,DOM.Iterable,ScriptHost が自動で読み込まれている
-- 上記の `--noEmitOnError` に記載されているが、エラーがあれば出力しないオプション
-- 上記の `--strict` に記載されているが、`true`を指定すると、--noImplicitAny, --noImplicitThis, --alwaysStrict, --strictBindCallApply, --strictNullChecks, --strictFunctionTypes and --strictPropertyInitialization が有効になる
 
-| オプション値        | 説明                                                           |
-| :------------------ | :------------------------------------------------------------- |
-| noImplicitAny       | 暗黙的な any を許容しない                                      |
-| strictNullChecks    | null チェックを厳格にする                                      |
-| strictBindCallApply | bind, call, apply で増える引数変化に応じて厳しく型チェックする |
-
-- 上記の `--noUnusedLocals` に記載されているが、`true`を指定すると、未使用のローカル変数をエラーにしてくれる
-- 上記の `--noUnusedParameters` に記載されているが、`true`を指定すると、未使用の引数をエラーにしてくれる
-- 上記の `--noImplicitReturns` に記載されているが、`true`を指定すると、暗黙的なリターンをエラーにしてくれる
-- 上記の `--` に記載されているが、`true`を指定すると、をエラーにしてくれる
+| オプション値        | 説明                                                                                                                                             |
+| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| lib                 | ES6 の場合、DOM,ES6,DOM.Iterable,ScriptHost が自動で読み込まれる                                                                                 |
+| noEmitOnError       | エラーがあれば出力しない                                                                                                                         |
+| strict              | noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes, strictPropertyInitialization を一括有効 |
+| noImplicitAny       | 暗黙的な any を許容しない                                                                                                                        |
+| strictNullChecks    | null チェックを厳格にする                                                                                                                        |
+| strictBindCallApply | bind, call, apply で増える引数変化に応じて厳しく型チェックする                                                                                   |
+| noUnusedLocals      | 未使用のローカル変数をエラーにする                                                                                                               |
+| noUnusedParameters  | 未使用の引数をエラーにする                                                                                                                       |
+| noImplicitReturns   | 暗黙的なリターンをエラーにする                                                                                                                   |
