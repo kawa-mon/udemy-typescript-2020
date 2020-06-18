@@ -56,3 +56,8 @@
 | noUnusedLocals      | 未使用のローカル変数をエラーにする                                                                                                               |
 | noUnusedParameters  | 未使用の引数をエラーにする                                                                                                                       |
 | noImplicitReturns   | 暗黙的なリターンをエラーにする                                                                                                                   |
+
+### セクション 4：クラス
+
+- TS ではクラス内メソッドの引数で this の型を宣言することで this を厳密に利用することができる
+  - function 内の this は呼び出されたときに決定するので複雑
