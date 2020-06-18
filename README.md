@@ -45,3 +45,4 @@
 
 - [tsconfig.json の設定一覧](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - 上記の `--lib` に記載されているが、ES6 の場合、DOM,ES6,DOM.Iterable,ScriptHost が自動で読み込まれている
+- 上記の `--noEmitOnError` に記載されているが、エラーがあれば出力しないオプション
