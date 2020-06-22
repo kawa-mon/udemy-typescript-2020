@@ -1,6 +1,6 @@
 export {}
 
-class Person {
+abstract class Person {
   static species = 'Homo sapiences'
   static isAdult(age: number): boolean {
     if (age > 17) return true
@@ -8,13 +8,16 @@ class Person {
   }
 
   constructor(public readonly name: string, protected age: number) {}
+
   incrementAge() {
     this.age += 1
   }
 
   greeting(this: Person) {
     console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`)
+    this.explainJob()
   }
+  abstract explainJob(): void
 }
 
 class Teacher extends Person {
@@ -31,13 +34,10 @@ class Teacher extends Person {
     this._subject = value
   }
 
-  greeting(this: Teacher) {
-    console.log(
-      `Hello! My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}.`
-    )
+  explainJob(): void {
+    console.log(`I am a teacher and I teach ${this.subject}.`)
   }
 }
-console.log(Person.species)
-console.log(Person.isAdult(20))
-console.log(Teacher.species)
-console.log(Teacher.isAdult(20))
+
+const teacher = new Teacher('Quill', 38, 'Math')
+teacher.greeting()
