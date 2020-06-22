@@ -12,6 +12,6 @@ class Developer implements Human {
     console.log(`Hello! ${message}`)
   }
 }
-const developer = new Developer('Quill', 38, 5)
+const developer: Human = new Developer('Quill', 38, 5)
 console.log({ developer })
 console.log(developer.greeting('Bob'))
