@@ -21,7 +21,9 @@ abstract class Person {
 }
 
 class Teacher extends Person {
-  constructor(name: string, age: number, private _subject: string) {
+  private static instance: Teacher
+
+  private constructor(name: string, age: number, private _subject: string) {
     super(name, age)
   }
 
@@ -37,7 +39,14 @@ class Teacher extends Person {
   explainJob(): void {
     console.log(`I am a teacher and I teach ${this.subject}.`)
   }
+
+  static getInstance() {
+    if (Teacher.instance) return Teacher.instance
+    Teacher.instance = new Teacher('Quill', 38, 'Math')
+    return Teacher.instance
+  }
 }
 
-const teacher = new Teacher('Quill', 38, 'Math')
-teacher.greeting()
+const teacher1 = Teacher.getInstance()
+const teacher2 = Teacher.getInstance()
+console.log(teacher1, teacher2)
