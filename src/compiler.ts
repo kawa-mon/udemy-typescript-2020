@@ -1,3 +1,5 @@
+export {}
+
 function echo(message: string): string | null {
   return message
 }
