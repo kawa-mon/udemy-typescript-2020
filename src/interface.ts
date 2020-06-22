@@ -1,7 +1,7 @@
 export {}
 
 interface Human {
-  name: string
+  readonly name: string
   age: number
   greeting(message: string): void
 }
@@ -12,6 +12,7 @@ class Developer implements Human {
     console.log(`Hello! ${message}`)
   }
 }
-const developer: Human = new Developer('Quill', 38, 5)
+const developer = new Developer('Quill', 38, 5)
+developer.name = 'hello'
 console.log({ developer })
 console.log(developer.greeting('Bob'))
