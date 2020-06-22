@@ -52,3 +52,7 @@ function havePet(pet: Pet): void {
   if (pet instanceof Bird) pet.fly()
 }
 havePet(new Bird())
+
+// const input = <HTMLInputElement>document.getElementById('input')
+const input = document.getElementById('input') as HTMLInputElement
+if (input) input.value
