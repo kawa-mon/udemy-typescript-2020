@@ -70,3 +70,17 @@ const designer: Designer = {
   role: 'web'
 }
 console.log({ designer })
+
+interface DownloadedData {
+  id: number
+  user?: {
+    name?: {
+      first: string
+      last: string
+    }
+  }
+}
+const downloadedData: DownloadedData = {
+  id: 1
+}
+console.log(downloadedData.user?.name?.first)
