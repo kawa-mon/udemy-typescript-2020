@@ -150,3 +150,9 @@ interface Profile {
 オプショナルプロパティは何も実装しなければ undefined を返す。 undefined かもしれないプロパティをそのままチェーンすることはできない。そこで、`?`をプロパティ末尾につけると、存在する場合はチェーンして存在しない場合は undefined を返すという処理になる。
 
 TypeScript 3.7 から登場。
+
+#### Nullish Coalescing
+
+null もしくは undefined を返す場合に処理を分岐させたい場合、`??` の後に処理をかける。or 演算子 `||` では空文字も分岐させてしまう。
+
+TypeScript 3.7 から登場。
