@@ -56,3 +56,13 @@ havePet(new Bird())
 // const input = <HTMLInputElement>document.getElementById('input')
 const input = document.getElementById('input') as HTMLInputElement
 if (input) input.value
+
+interface Designer {
+  name: string
+  [index: string]: string
+}
+const designer: Designer = {
+  name: 'Quill',
+  role: 'web'
+}
+console.log({ designer })
