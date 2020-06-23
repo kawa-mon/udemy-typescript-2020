@@ -17,10 +17,14 @@ const quill: EngineerBlogger = {
   follower: 1000
 }
 
-function toUpperCase(x: string | number) {
+function toUpperCase(x: string): string
+function toUpperCase(x: number): number
+function toUpperCase(x: any): any {
   if (typeof x === 'string') return x.toUpperCase()
-  return ''
+  return x
 }
+// const upperHello = toUpperCase('hello') as string
+const upperHello = toUpperCase('hello')
 
 type NomadWorker = Engineer | Blogger
 function describeProfile(nomadWorker: NomadWorker) {
