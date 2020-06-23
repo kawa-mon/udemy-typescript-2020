@@ -109,6 +109,8 @@
 
 ### セクション 6：応用
 
+[型の互換性ドキュメント](https://github.com/microsoft/TypeScript/blob/master/doc/spec.md#3.11.4)
+
 #### 交差型
 
 型は既存の型を足し合わせるだけで作ることが可能

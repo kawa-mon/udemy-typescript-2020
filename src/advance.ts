@@ -26,6 +26,14 @@ function toUpperCase(x: any): any {
 // const upperHello = toUpperCase('hello') as string
 const upperHello = toUpperCase('hello')
 
+interface TmpFunc {
+  (x: string): number
+  (x: number): number
+}
+const realFunc: TmpFunc = function (x: string | number) {
+  return 0
+}
+
 type NomadWorker = Engineer | Blogger
 function describeProfile(nomadWorker: NomadWorker) {
   if ('role' in nomadWorker) console.log(nomadWorker.role)
