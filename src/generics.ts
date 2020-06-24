@@ -43,3 +43,5 @@ const fetchData: Promise<string> = new Promise((resolve) => {
 fetchData.then(data => {
   console.log(data.toUpperCase())
 })
+
+const vegetables: Array<string> = ['Tomato', 'Broccoli', 'Asparagus']
