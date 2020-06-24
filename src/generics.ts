@@ -52,3 +52,11 @@ interface ResponseData<T extends { message: string } = any> {
 }
 let genericsTmp1: ResponseData = { data: 11, status: 11 }
 let genericsTmp2: ResponseData<{ message: string }> = { data: { message: 'Hello' }, status: 11 }
+
+interface Vegetables {
+  readonly tomato: string
+  pumpkin?: string
+}
+type MappedTypes = {
+  -readonly [P in keyof Vegetables]-?: string
+}
