@@ -40,8 +40,15 @@ const fetchData: Promise<string> = new Promise((resolve) => {
     resolve('hello')
   }, 1000)
 })
-fetchData.then(data => {
+fetchData.then((data) => {
   console.log(data.toUpperCase())
 })
 
 const vegetables: Array<string> = ['Tomato', 'Broccoli', 'Asparagus']
+
+interface ResponseData<T extends { message: string } = any> {
+  data: T
+  status: number
+}
+let genericsTmp1: ResponseData = { data: 11, status: 11 }
+let genericsTmp2: ResponseData<{ message: string }> = { data: { message: 'Hello' }, status: 11 }
