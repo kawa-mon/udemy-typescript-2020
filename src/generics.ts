@@ -34,3 +34,12 @@ interface Todo {
 }
 type TodoAble = Partial<Todo>
 type ReadTodo = Readonly<Todo>
+
+const fetchData: Promise<string> = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve('hello')
+  }, 1000)
+})
+fetchData.then(data => {
+  console.log(data.toUpperCase())
+})
