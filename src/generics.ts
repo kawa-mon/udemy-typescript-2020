@@ -27,3 +27,10 @@ stringLightDatabase.add('Banana')
 stringLightDatabase.add('Grape')
 stringLightDatabase.remove('Banana')
 console.log(stringLightDatabase.get())
+
+interface Todo {
+  title: string
+  text: string
+}
+type TodoAble = Partial<Todo>
+type ReadTodo = Readonly<Todo>
