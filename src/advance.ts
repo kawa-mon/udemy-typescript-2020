@@ -113,3 +113,9 @@ advancedFn(0, 'hi', true)
 // advancedFn(0, 'hi', 111)
 advancedFn(0, 'hi', true, 1, 2, 3)
 // advancedFn(0, 'hi', 1, 2, 3)
+
+const array = [10, 20] as const
+const peter = {
+  name: 'Peter',
+  age: 38
+} as const
