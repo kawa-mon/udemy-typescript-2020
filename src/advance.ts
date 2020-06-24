@@ -107,7 +107,7 @@ console.log(downloadedData.user?.name?.first)
 const userData = downloadedData.user ?? 'no-user'
 console.log(userData)
 
-function advancedFn(...args: [number, string, boolean?, ...number[]]) {}
+function advancedFn(...args: readonly [number, string, boolean?, ...number[]]) {}
 advancedFn(0, 'hi')
 advancedFn(0, 'hi', true)
 // advancedFn(0, 'hi', 111)
