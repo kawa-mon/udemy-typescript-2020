@@ -119,3 +119,4 @@ const peter = {
   name: 'Peter',
   age: 38
 } as const
+type PeterType = typeof peter;
