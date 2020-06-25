@@ -1,4 +1,5 @@
 function Logging(message: string) {
+  console.log('Logging Factory')
   return function (constructor: Function) {
     console.log(message)
     console.log(constructor)
@@ -6,7 +7,9 @@ function Logging(message: string) {
 }
 
 function Component(template: string, selector: string) {
-  return function (constructor: { new (...args: any[]): { name: string } }) {
+  console.log('Component Factory')
+  return function (constructor: { new(...args: any[]): { name: string } }) {
+    console.log('Component')
     const mountedElement = document.querySelector(selector)
     const instance = new constructor()
     if (mountedElement) {
@@ -16,8 +19,8 @@ function Component(template: string, selector: string) {
   }
 }
 
-@Component('<h1>{{ name }}</h1>', '#app')
 @Logging('Logging User')
+@Component('<h1>{{ name }}</h1>', '#app')
 class User {
   name = 'Quill'
   constructor() {
