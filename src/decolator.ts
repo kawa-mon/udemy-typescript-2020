@@ -1,11 +1,13 @@
 export {}
 
-function Logging(constructor: Function) {
-  console.log('Logging...')
-  console.log(constructor)
+function Logging(message: string) {
+  return function (constructor: Function) {
+    console.log(message)
+    console.log(constructor)
+  }
 }
 
-@Logging
+@Logging('Logging User')
 class User {
   name = 'Quill'
   constructor() {
