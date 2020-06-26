@@ -40,6 +40,12 @@ function enumerable(isEnumerable: boolean) {
     }
   }
 }
+function ParameterLogging(target: any, propertyKey: string, parameterIndex: number) {
+  console.log('ParameterLogging')
+  console.log(target)
+  console.log(propertyKey)
+  console.log(parameterIndex)
+}
 function AccessorLogging(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
   console.log('AccessorLogging')
   console.log(target)
@@ -64,8 +70,8 @@ class User {
   }
   @enumerable(false)
   @MethodLogging
-  greeting() {
-    console.log('hello')
+  greeting(@ParameterLogging message: string) {
+    console.log(message)
   }
 }
 const user1 = new User(32)
