@@ -8,13 +8,18 @@ function Logging(message: string) {
 
 function Component(template: string, selector: string) {
   console.log('Component Factory')
-  return function (constructor: { new(...args: any[]): { name: string } }) {
-    console.log('Component')
-    const mountedElement = document.querySelector(selector)
-    const instance = new constructor()
-    if (mountedElement) {
-      mountedElement.innerHTML = template
-      mountedElement.querySelector('h1')!.textContent = instance.name
+  return function <T extends { new (...args: any[]): { name: string } }>(constructor: T) {
+    return class extends constructor {
+      constructor(...args: any[]) {
+        super(...args)
+        console.log('Component')
+        const mountedElement = document.querySelector(selector)
+        const instance = new constructor()
+        if (mountedElement) {
+          mountedElement.innerHTML = template
+          mountedElement.querySelector('h1')!.textContent = instance.name
+        }
+      }
     }
   }
 }
@@ -23,10 +28,10 @@ function Component(template: string, selector: string) {
 @Component('<h1>{{ name }}</h1>', '#app')
 class User {
   name = 'Quill'
-  constructor() {
+  constructor(public age: number) {
     console.log('User was created!')
   }
 }
-const user1 = new User()
-const user2 = new User()
-const user3 = new User()
+const user1 = new User(32)
+const user2 = new User(32)
+const user3 = new User(32)
