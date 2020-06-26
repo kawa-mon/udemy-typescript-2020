@@ -30,6 +30,13 @@ function PropertyLogging(target: any, propertyKey: string) {
   console.log(propertyKey)
 }
 
+function MethodLogging(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  console.log('MethodLogging');
+  console.log(target);
+  console.log(propertyKey);
+  console.log(descriptor);
+}
+
 @Logging('Logging User')
 @Component('<h1>{{ name }}</h1>', '#app')
 class User {
@@ -37,6 +44,11 @@ class User {
   name = 'Quill'
   constructor(public age: number) {
     console.log('User was created!')
+  }
+
+  @MethodLogging
+  greeting() {
+    console.log('hello');
   }
 }
 const user1 = new User(32)

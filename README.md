@@ -248,3 +248,15 @@ interface Profile {
 
   - 宣言したプロパティが static メンバーの場合はクラスのコンストラクタ関数、インスタンスメンバーの場合はクラスの prototype
   - メンバー名
+
+### メソッド・デコレータ
+
+- メソッドの宣言の直前で宣言し、クラス内部のメソッドをデコレートする
+- 引数は 3 つ取る
+
+  - 宣言したプロパティが static メンバーの場合はクラスのコンストラクタ関数、インスタンスメンバーの場合はクラスの prototype
+  - メンバー名
+  - メンバーの Property Descriptor（プロパティ・ディスクリプタ）
+
+- プロパティ・ディスクリプタは [ES5 に定義されているもの](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
+  - `Object.getOwnPropertyDescriptor(user, 'name')` でも取れる
