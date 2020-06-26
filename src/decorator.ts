@@ -5,7 +5,6 @@ function Logging(message: string) {
     console.log(constructor)
   }
 }
-
 function Component(template: string, selector: string) {
   console.log('Component Factory')
   return function <T extends { new (...args: any[]): { name: string } }>(constructor: T) {
@@ -23,18 +22,22 @@ function Component(template: string, selector: string) {
     }
   }
 }
-
 function PropertyLogging(target: any, propertyKey: string) {
   console.log('propertyLogging')
   console.log(target)
   console.log(propertyKey)
 }
-
 function MethodLogging(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-  console.log('MethodLogging');
-  console.log(target);
-  console.log(propertyKey);
-  console.log(descriptor);
+  console.log('MethodLogging')
+  console.log(target)
+  console.log(propertyKey)
+  console.log(descriptor)
+}
+function AccessorLogging(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  console.log('AccessorLogging')
+  console.log(target)
+  console.log(propertyKey)
+  console.log(descriptor)
 }
 
 @Logging('Logging User')
@@ -42,13 +45,19 @@ function MethodLogging(target: any, propertyKey: string, descriptor: PropertyDes
 class User {
   @PropertyLogging
   name = 'Quill'
-  constructor(public age: number) {
+  constructor(private _age: number) {
     console.log('User was created!')
   }
-
+  @AccessorLogging
+  get age() {
+    return this._age
+  }
+  set age(value) {
+    this._age = value
+  }
   @MethodLogging
   greeting() {
-    console.log('hello');
+    console.log('hello')
   }
 }
 const user1 = new User(32)

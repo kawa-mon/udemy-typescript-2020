@@ -260,3 +260,7 @@ interface Profile {
 
 - プロパティ・ディスクリプタは [ES5 に定義されているもの](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
   - `Object.getOwnPropertyDescriptor(user, 'name')` でも取れる
+
+### アクセサー・デコレータ
+
+- メソッド・デコレータと同じ使い方
