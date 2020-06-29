@@ -291,3 +291,6 @@ interface Profile {
 
 - 型定義ファイル（.d.ts）の話
 - axios には存在するが、lodash には存在しないので独自設定が必要
+  1. `@types/ライブラリ名` で検索して誰かが型定義ファイルを作っていないか調べる  
+     node_modules/@types 配下は TypeScript が見に行ける  
+     https://www.npmjs.com/package/@types/lodash
