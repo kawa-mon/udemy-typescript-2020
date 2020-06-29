@@ -286,3 +286,8 @@ interface Profile {
   - 一部ブラウザは未対応：https://caniuse.com/#feat=es6-module
   - HTTP 通信なので同じサーバから取得する必要がある
   - つまりローカルサーバを立ち上げないと動かない
+
+## セクション 11：TypeScript で JavaScript ライブラリを使う
+
+- 型定義ファイル（.d.ts）の話
+- axios には存在するが、lodash には存在しないので独自設定が必要
