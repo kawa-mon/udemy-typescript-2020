@@ -73,4 +73,5 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
   // "include": ["./src/food-app"]
+  "files": ["./src/library.ts", "./src/lodash.d.ts"]
 }
