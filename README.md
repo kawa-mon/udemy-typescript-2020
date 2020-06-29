@@ -286,3 +286,13 @@ interface Profile {
   - 一部ブラウザは未対応：https://caniuse.com/#feat=es6-module
   - HTTP 通信なので同じサーバから取得する必要がある
   - つまりローカルサーバを立ち上げないと動かない
+
+## セクション 11：TypeScript で JavaScript ライブラリを使う
+
+- 型定義ファイル（.d.ts）の話
+- axios には存在するが、lodash には存在しないので独自設定が必要
+  1. `@types/ライブラリ名` で検索して誰かが型定義ファイルを作っていないか調べる  
+     node_modules/@types 配下は TypeScript が見に行ける  
+     https://www.npmjs.com/package/@types/lodash
+  2. 誰も型定義ファイルを作っていない場合、自分が作るしかない  
+     [公式ドキュメントに記載例あり](https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html)
