@@ -294,4 +294,5 @@ interface Profile {
   1. `@types/ライブラリ名` で検索して誰かが型定義ファイルを作っていないか調べる  
      node_modules/@types 配下は TypeScript が見に行ける  
      https://www.npmjs.com/package/@types/lodash
-  2. 誰も型定義ファイルを作っていない場合、自分が作るしかない
+  2. 誰も型定義ファイルを作っていない場合、自分が作るしかない  
+     [公式ドキュメントに記載例あり](https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html)
